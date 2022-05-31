@@ -75,14 +75,14 @@ body a:hover {
 .story_block{
     margin: 0 auto;
     position: relative;
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
     float: left;
     scroll-behavior: auto;
     
-    /* overflow: -moz-scrollbars-none; */
-    /* -webkit-overflow-scrolling: touch; */
-    /* -ms-overflow-style: none; */
+    overflow: -moz-scrollbars-none;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
     /* scroll-padding: 500px  !important; */
 }
 .story_ana_block{
@@ -113,7 +113,6 @@ body a:hover {
     margin: 0;
     border: 1px solid #e6e6e6;
     border-radius: 50%;
-    /* display: block; */
     width: 65px;
     height: 65px;
     
@@ -179,14 +178,28 @@ body a:hover {
 
 /* =================================== */
 /*========== Content Articu ==========*/
+@media (min-width: 768px) {
+    .women article{
+        width: 50% !important;
+        /* height: 100% !important; */
+        /* justify-content: center; */
+    }
+}
+@media (min-width: 1024px) {
+    .women article {
+        width: 33% !important;
+        /* height: 100% !important; */
+        /* justify-content: center; */
+    }
+}
 
 .women .component {
-    width: 383px;
-    height: 226px;
+    width: 100%;
+    /* height: 226px; */
     padding: 0 12px;
     box-sizing: border-box;
     margin-bottom: 25px;
-    display: flex;
+    /* display: flex; */
     
 }
 .women .component a {
@@ -208,11 +221,8 @@ body a:hover {
     
 }
 .image-container img {
-    height: 187px;
+    height: 100%;
     width: 100%;
-    /* display: block;
-    position: relative; */
-    
 }
 .summary_text {
     background: #1b1b1b;
